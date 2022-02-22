@@ -1,0 +1,38 @@
+module.exports = {
+  env: {
+    browser: true,
+    commonjs: true,
+    node: true,
+    mocha: true,
+    es2020: true,
+  },
+  parserOptions: {
+    ecmaVersion: 2018,
+  },
+  extends: [
+    'airbnb',
+    'prettier',
+    'airbnb-base/legacy',
+    'plugin:mocha/recommended',
+    'plugin:wdio/recommended',
+  ],
+  rules: {
+    'no-var': 'error',
+    'prettier/prettier': ['error'],
+    'no-underscore-dangle': 'off',
+    'no-await-in-loop': 'off',
+    'class-methods-use-this': 'off',
+    'import/no-unresolved': [2, { ignore: ['k6'] }],
+    'mocha/no-skipped-tests': 'error',
+    'mocha/no-exclusive-tests': 'error',
+    'mocha/no-mocha-arrows': 'off',
+    'no-return-await': 'off',
+    'no-undef': 'off',
+    'no-unused-vars': 'off',
+    'comma-dangle': 'off',
+    'implicit-arrow-linebreak': 'off',
+    strict: 'off',
+  },
+  ignorePatterns: ['node_modules/'],
+  plugins: ['import', 'prettier', 'you-dont-need-momentjs', 'mocha', 'wdio'],
+};
